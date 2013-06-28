@@ -8,7 +8,7 @@ http://www.whatwg.org/specs/web-apps/current-work/multipage/workers.html#workers
 https://github.com/bcooksey/web-worker-demos
 */
 
-// Spawn one or more workers by giving a url to a self-contained script to execute
+// Spawn 2 workers by giving a url to a self-contained script to execute
 var worker = new Worker('js_test_worker_server.js');
 var worker2 = new Worker('js_test_worker_server2.js');   // a second worker
 
@@ -23,7 +23,7 @@ worker2.onmessage = function(e) {
     console.log(e.data);
 };
 
-// Send the worker a message
+// Send the workers a message each
 worker.postMessage('hello 1st worker');
 worker2.postMessage('hello 2nd worker');
 
