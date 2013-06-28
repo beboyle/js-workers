@@ -9,8 +9,8 @@ https://github.com/bcooksey/web-worker-demos
 */
 
 // Spawn 2 workers by giving a url to a self-contained script to execute
-var worker = new Worker('js_test_worker_server.js');
-var worker2 = new Worker('js_test_worker_server2.js');   // a second worker
+var worker  = new Worker('js_test_worker_background.js');
+var worker2 = new Worker('js_test_worker_background2.js');   // a second worker
 
 
 // Decide what to do when the worker sends us a message
